@@ -8,8 +8,15 @@ import behavioralPattern.commandPattern.*;
 import behavioralPattern.iteratorPattern.Container;
 import behavioralPattern.iteratorPattern.GamesContainer;
 import behavioralPattern.iteratorPattern.Iterator;
+import behavioralPattern.mediatorPattern.ConcreteMediator;
+import behavioralPattern.mediatorPattern.Developer;
+import behavioralPattern.mediatorPattern.ProductDirector;
+import behavioralPattern.mementoPattern.MementoManager;
+import behavioralPattern.mementoPattern.WikiPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 public class App {
     private static final Logger logger = LoggerFactory.getLogger(App.class);
@@ -52,17 +59,55 @@ public class App {
 
 
         // iterator Pattern
-        Container gamesContainer = new GamesContainer();
-        Iterator iter = gamesContainer.iterator();
-
-        while (iter.hasNext()) {
-            System.out.println(iter.next());
-        }
-
+        //Container gamesContainer = new GamesContainer();
+        //Iterator iter = gamesContainer.iterator();
         //
-        //while (iter.hasPrevious()) {
-        //    System.out.println(iter.previous());
+        //while (iter.hasNext()) {
+        //    System.out.println(iter.next());
         //}
-    }
+        //
+        ////
+        ////while (iter.hasPrevious()) {
+        ////    System.out.println(iter.previous());
+        ////}
 
+
+        // mediator Pattern
+        // a question : what is the difference between proxy pattern vs mediator pattern
+        //ConcreteMediator mediator = new ConcreteMediator();
+        //Developer developer = new Developer("cc-server", mediator);
+        //ProductDirector pd = new ProductDirector("cc-pd", mediator);
+        //
+        //mediator.setDev(developer);
+        //mediator.setPd(pd);
+        //
+        //pd.contact("we have a new requirement");
+        //developer.contact("no problem, create a ticket");
+        //pd.contact("sure, a ticket created");
+        //developer.contact("work starts");
+
+
+        // memento Pattern
+        //WikiPage page = new WikiPage();
+        //
+        //page.setPage("content 0");
+        //page.print();
+        //page.setPage("content 1");
+        //page.print();
+        //page.setPage("content 2");
+        //page.print();
+        //List<Integer> list = page.getManager().getAllVersions();
+        //System.out.println("versions : ");
+        //for (int i : list) {
+        //    System.out.println(i);
+        //}
+        //
+        //page.restoreMemento(page.getManager().getMemento(0));
+        //page.print();
+        //page.save();
+        //page.print();
+
+
+
+    }
 }
