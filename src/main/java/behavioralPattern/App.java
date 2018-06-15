@@ -13,9 +13,18 @@ import behavioralPattern.mediatorPattern.Developer;
 import behavioralPattern.mediatorPattern.ProductDirector;
 import behavioralPattern.mementoPattern.MementoManager;
 import behavioralPattern.mementoPattern.WikiPage;
+import behavioralPattern.observerPattern.AirConditioningObserver;
+import behavioralPattern.observerPattern.ConcreteSubject;
+import behavioralPattern.observerPattern.LightObserver;
+import behavioralPattern.observerPattern.Subject;
+import behavioralPattern.statePattern.DangerState;
+import behavioralPattern.statePattern.Instrument;
+import behavioralPattern.strategyPattern.Calculator;
+import behavioralPattern.strategyPattern.PlusCalculator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class App {
@@ -108,6 +117,28 @@ public class App {
         //page.print();
 
 
+        // observer Pattern
+        //Subject sub = new ConcreteSubject();
+        //sub.add(new AirConditioningObserver());
+        //sub.add(new LightObserver());
+        //
+        //sub.operation();
 
+
+        // state Pattern
+        // // lots of examples in life...
+        //Instrument instrument = new Instrument();
+        //instrument.getState().update();
+        //instrument.setState(new DangerState());
+        //instrument.getState().update();
+
+        // strategy Pattern
+        // client must be aware of different strategies (algorithms, methods, etc).
+        // A client must understand how strategies differ before it can select the appropriate one.
+
+        //List<Integer> list = Arrays.asList(10,3,2,4,5,6);
+        //Calculator plusCalculator = new PlusCalculator();
+        //int res = plusCalculator.calculate(list);
+        //System.out.println(res);
     }
 }

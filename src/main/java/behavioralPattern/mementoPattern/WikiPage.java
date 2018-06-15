@@ -14,8 +14,8 @@ public class WikiPage {
         next = 0;
     }
 
-    public Memento createMemento() {
-        return new Memento(this);
+    public PageMemento createMemento() {
+        return new PageMemento(this);
     }
 
     /**
